@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">tech_test</string>
+
+    <string name="no_item_message">No item to show</string>
+</resources>
