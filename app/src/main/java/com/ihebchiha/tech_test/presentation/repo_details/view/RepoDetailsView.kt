@@ -8,6 +8,9 @@ import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.text.TextStyle
+import androidx.compose.ui.text.font.FontStyle
+import androidx.compose.ui.text.font.FontWeight
 
 @Composable
 fun RepoDetailsView(sharedViewModel: SharedViewModel){
@@ -15,9 +18,9 @@ fun RepoDetailsView(sharedViewModel: SharedViewModel){
        mutableStateOf(sharedViewModel.repository)
    }
 
-    Box(modifier = Modifier.fillMaxSize(),){
+    Box(modifier = Modifier.fillMaxSize(), contentAlignment = Alignment.Center){
         Column(verticalArrangement = Arrangement.SpaceAround, horizontalAlignment = Alignment.CenterHorizontally) {
-            Text(text = repository!!.fullName)
+            Text(text = repository!!.fullName, style = TextStyle(fontWeight = FontWeight.Bold))
             Text(text = repository!!.description)
         }
     }
